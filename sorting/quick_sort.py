@@ -39,7 +39,8 @@ def partition(numbers, low, high):
             idx = idx + 1
             numbers[idx], numbers[j] = numbers[j], numbers[idx]
             swap_count += 1
-            print(f'\t\tfor j is {j}, idx is {idx} => swap {numbers[j]} with {numbers[idx]}, numbers: {numbers}')
+            print(
+                f'\t\tfor j is {j}, idx is {idx} => swap {numbers[j]} with {numbers[idx]}, numbers: {numbers}')
 
     numbers[idx+1], numbers[high] = numbers[high], numbers[idx+1]
     print(f'\tswap {numbers[high]} with {numbers[idx+1]}, numbers: {numbers}')
