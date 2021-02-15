@@ -1,6 +1,9 @@
 # Bubble sort
+# Stable (leaves relative ordering of 'equal' elements intact)
+# In-place (input is sorted and modified "in place")
 # Runtime: O(N^2) average and worst case, best case O(N)
 # Memory: O(1)
+
 
 from typing import Callable, List
 from termcolor import colored
