@@ -9,7 +9,8 @@ from termcolor import colored
 
 import random
 
-
+# Implemented with ideas from:
+# https://stackoverflow.com/questions/18761766/mergesort-with-python
 def mergesort_simple(nums: List[int]) -> List[int]:
     def merge(left: List[int], b: List[int]) -> List[int]:
         res = []
@@ -27,7 +28,7 @@ def mergesort_simple(nums: List[int]) -> List[int]:
 
     if len(nums) < 2:
         return nums
-        
+
     mid = len(nums) // 2
     l = mergesort_simple(nums[:mid])
     r = mergesort_simple(nums[mid:])
