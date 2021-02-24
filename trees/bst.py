@@ -34,7 +34,7 @@ def insert_node(root: Node[Numeric], node: Node[Numeric]) -> Node[Numeric]:
     return root
 
 
-def level_order_traverse(root: Node[Numeric]):
+def level_order_traverse(root: Node[Numeric]) -> None:
     q = Deque([root])
     while q:
         node = q.popleft()
@@ -45,7 +45,7 @@ def level_order_traverse(root: Node[Numeric]):
             q.append(node.right)
 
 
-def in_order_traverse(root: Node[Numeric]):
+def in_order_traverse(root: Node[Numeric]) -> None:
     if root.left:
         in_order_traverse(root.left)
     print(root.val)
@@ -53,7 +53,7 @@ def in_order_traverse(root: Node[Numeric]):
         in_order_traverse(root.right)
 
 
-def pre_order_traverse(root: Node[Numeric]):
+def pre_order_traverse(root: Node[Numeric]) -> None:
     print(root.val)
     if root.left:
         pre_order_traverse(root.left)
@@ -61,7 +61,7 @@ def pre_order_traverse(root: Node[Numeric]):
         pre_order_traverse(root.right)
 
 
-def post_order_traverse(root: Node[Numeric]):
+def post_order_traverse(root: Node[Numeric]) -> None:
     if root.left:
         post_order_traverse(root.left)
     if root.right:
